@@ -1,0 +1,31 @@
+{%load bootstrap3%}
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Portfolio Kiptoo Rotich</title>
+    {% endif %}
+
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{%static 'css/index.css'%}">
+    
+    {% endblock %}
+
+</head>
+
+<body>
+    {%include "navbar.html"%}
+    {%block content%}{%endblock %}
+    {%block scripts%}
+    <script src="{%static 'js/script.js'%}"></script>
+    {%endblock%}
+</body>
+
+</html>

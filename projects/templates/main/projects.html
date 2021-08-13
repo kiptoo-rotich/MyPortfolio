@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="container">
+    <h1>Projects</h1>
+    <div class="row">
+        <div class=" col-md-4 col-lg-4">
+            {%for project in project_results%}
+            <ol>
+                <li>{{project.title}}</li>
+            </ol>
+            {%endfor%}
+        </div>
+        <div class="col-sm-12 col-md-1 col-lg-1"></div>
+
+        <div class="col-sm-12 col-md-6 col-lg-6" style="border:1px solid lightgray;">
+            {%for project in project_results%}
+            <h3>{{project.title}}</h3>
+            <img src="{{project.screenshot.url}}" alt="Image" width="100%" class="img-responsive project-image">
+            <p>Repository <a href="{{project.repo_link}}">link.</a></p>
+            <p>Go <a href="{{project.live_links}}">live.</a></p>
+            {%endfor%}
+
+        </div>
+        <div class="col-md-1 col-lg-1"></div>
+
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,83 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            {%for detail in details%}
+            <div class="details">
+                <p>{{detail.name}}</p>
+                <p>{{detail.role}}</p>
+                <p>{{detail.quote}}</p>
+            </div>
+            {%endfor%}
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <center><img src="./../../static/images/image (1).png" alt="Me" class="img-responsive" width="200px"
+                    class="img-responsive">
+            </center>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4" style="text-align:right">
+            {%for detail in details%}
+            <ul class="details">
+                <li><a
+                        href="https://www.google.com/maps/place/Nairobi/@-1.2818982,36.7984759,13.06z/data=!4m13!1m7!3m6!1s0x182f1172d84d49a7:0xf7cf0254b297924c!2sNairobi!3b1!8m2!3d-1.2920659!4d36.8219462!3m4!1s0x182f1172d84d49a7:0xf7cf0254b297924c!8m2!3d-1.2920659!4d36.8219462">{{detail.city}}</a>
+                    {{detail.country}} <img src="./../../static/images/location.png" alt="Location" width="23px"></li>
+                <li><a href="{{detail.github_link}}">Github account <img
+                            src="https://img.icons8.com/ios-glyphs/30/000000/github.png" width="20px" /></a></li>
+                <li><a href="https://www.gmail.com/mail/">{{detail.email}} <img
+                            src="https://img.icons8.com/color/48/000000/gmail--v1.png" width="20px" /></a></li>
+                <li><a href="{{detail.linkedin}}">LinkedIn <img
+                            src="https://img.icons8.com/color/48/000000/linkedin.png" width="23px" /></a></li>
+                <li>{{project.phone_number}}</li>
+            </ul>
+            {%endfor%}
+        </div>
+    </div>
+    <hr class="resume">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <h2>EDUCATION</h2>
+            {%for education in education%}
+            <h3>{{education.certificate_type}}</h3>
+            <p>{{education.institution}}</p>
+            <p>{{education.period}}</p>
+            <p>{{education.certificate_name}}</p>
+            <p>{{education.school_location}}</p>
+            {%endfor%}
+            <hr>
+
+            <h2>WORK EXPERIENCE</h2>
+            {%for experience in experience%}
+            <h3>{{experience.position}}</h3>
+            <p>{{experience.company}}</p>
+            <p>{{experience.date}}</p>
+            <i>Tasks</i>
+
+            {%endfor%}
+            <hr>
+
+        </div>
+        <div class="col-md-8 col-lg-8">
+            <h2>SKILLS</h2>
+            {{skills}}
+
+            <h2>PERSONAL PROJECTS</h2>
+            {%for project in project_results%}
+            <ol>
+                <li>{{project.title}}</li>
+            </ol>
+            {%endfor%}
+            <h2>LINKS</h2>
+            {%for detail in details%}
+            <ol class="details">
+                <li><a href="{{detail.github_link}}"><img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"
+                            width="20px" />
+                        Github account </a></li>
+            </ol>
+            {%endfor%}
+            <h2>CERTIFICATES</h2>
+
+        </div>
+    </div>
+</div>
+{%endblock%}

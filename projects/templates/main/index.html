@@ -1,0 +1,22 @@
+{%extends 'main/base.html'%}
+{%load static%}
+{%block content%}
+{{block.super}}
+<div class="container">
+    <div class="row background-image">
+        <center><img class="img-responsive" src="../../static/images/image (1).png" alt="Image" class="img-responsive">
+        </center>
+    </div>
+    <div class="row hometitle" style="text-align:center">
+        {%for details in details%}
+        <p class="name">Hi, I'm {{details.name}}</p>
+
+        <h1>{{details.role}}</h1>
+        {%endfor%}
+    </div>
+    <img src="../../static/images/screen.jpg" alt="Image" class="img-responsive" style="bottom:0px;">
+
+</div>
+<a href="{%url 'contact'%}"><button class="connect btn btn-lg btn-info">CONNECT
+        WITH ME</button></a>
+{%endblock%}

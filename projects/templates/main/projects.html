@@ -1,4 +1,5 @@
 {%extends 'base.html'%}
+{%load static%}
 {%block content%}
 <div class="container">
     <h1>Projects</h1>
@@ -15,9 +16,18 @@
         <div class="col-sm-12 col-md-6 col-lg-6" style="border:1px solid lightgray;">
             {%for project in project_results%}
             <h3>{{project.title}}</h3>
-            <img src="{{project.screenshot.url}}" alt="Image" width="100%" class="img-responsive project-image">
-            <p>Repository <a href="{{project.repo_link}}">link.</a></p>
-            <p>Go <a href="{{project.live_links}}">live.</a></p>
+            <a href="{%url 'project' project.id%}"><img src="{{project.screenshot.url}}" alt="Image" width="100%" class="img-responsive project-image"></a>
+            <div class="row">
+                <div class="col-xm-6 col-sm-5 col-md-5 col-lg-5 project_padding">
+                    <p>Repository <a href="{{project.repo_link}}">link.</a></p>
+                    <p>Go <a href="{{project.live_links}}">live.</a></p>
+                </div>
+                <div class="col-xm-5 col-sm-5 col-md-5 col-lg-5 project_padding">
+                    <p class="tech">Technologies</p>
+                    <p class="technologies">{{project.technologies}}</p>
+                </div>
+            </div>
+
             {%endfor%}
 
         </div>
@@ -25,4 +35,6 @@
 
     </div>
 </div>
+
+
 {%endblock%}

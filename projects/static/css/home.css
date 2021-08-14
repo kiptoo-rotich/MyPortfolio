@@ -28,4 +28,28 @@ body {
 
 .name {
     margin-top: 5%;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 38px;
 }
+
+.ml-auto>li>a {
+    margin-right: 4px;
+}
+
+.background-image {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.view {
+    margin-top: 4%;
+    width: 30%;
+}
+
+.hometitle {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+

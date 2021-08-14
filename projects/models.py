@@ -3,7 +3,7 @@ from cloudinary.models import CloudinaryField
 from tinymce.models import HTMLField
 
 
-languages =(
+technologies =(
     ('Django','Django'),
     ('Flask','Flask'),
     ('Angular','Angular'),
@@ -18,7 +18,8 @@ class Project(models.Model):
     screenshot=CloudinaryField('image',default='Image')
     repo_link = models.CharField(max_length=50,null=True)
     live_links = models.CharField(max_length=50,null=True)
-    languages = models.CharField(choices=languages,max_length=20,null=True)  
+    technologies = models.CharField(choices=technologies,max_length=20,null=True) 
+     
       
     def __str__(self):
         return self.title

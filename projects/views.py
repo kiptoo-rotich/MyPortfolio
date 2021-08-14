@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Project,Details,Education,Experience
+from django.http import (Http404, HttpResponse)
 
 def index(request):
     details=Details.objects.all()
@@ -26,3 +27,10 @@ def resume(request):
 def contact(request):
     project_results=Project.objects.all()
     return render(request,'main/contact.html',{"project_results":project_results})
+
+def project(request,id):
+    try:
+        project = Project.objects.get(id=id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request, 'main/project.html',{"project":project})

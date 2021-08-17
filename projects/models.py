@@ -1,6 +1,8 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 from tinymce.models import HTMLField
+from multiselectfield import MultiSelectField
+
 
 
 technologies =(
@@ -9,6 +11,7 @@ technologies =(
     ('Angular','Angular'),
     ('Bootstrap','Bootstrap'),
     ('Git','Git'),
+    ('Javascript','Javascript'),
 )
 
 class Project(models.Model):
@@ -18,8 +21,8 @@ class Project(models.Model):
     screenshot=CloudinaryField('image',default='Image')
     repo_link = models.CharField(max_length=50,null=True)
     live_links = models.CharField(max_length=50,null=True)
-    technologies = models.CharField(choices=technologies,max_length=20,null=True) 
-     
+    technologies = MultiSelectField(max_length=200,null=True,choices=technologies)
+
       
     def __str__(self):
         return self.title

@@ -52,3 +52,29 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(+100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+p,h1 {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+img {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}

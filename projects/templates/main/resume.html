@@ -37,29 +37,30 @@
     <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4">
             <h2>EDUCATION</h2>
-            {%for education in education%}
-            <h3>{{education.certificate_type}}</h3>
-            <p>{{education.institution}}</p>
-            <p>{{education.period}}</p>
-            <p>{{education.certificate_name}}</p>
-            <p>{{education.school_location}}</p>
-            {%endfor%}
+            <div class="verticalLine">
+                {%for education in education%}
+                <h3>{{education.certificate_type}}</h3>
+                <p>{{education.institution}}</p>
+                <p>{{education.period}}</p>
+                <p>{{education.certificate_name}}</p>
+                <p>{{education.school_location}}</p>
+                {%endfor%}
+            </div>
             <hr>
 
             <h2>WORK EXPERIENCE</h2>
-            {%for experience in experience%}
-            <h3>{{experience.position}}</h3>
-            <p>{{experience.company}}</p>
-            <p>{{experience.date}}</p>
-            <i>Tasks</i>
+            <div class="verticalLine">
+                {%for experience in experience%}
+                <h3>{{experience.position}}</h3>
+                <p>{{experience.company}}</p>
+                <p>{{experience.date}}</p>
+            </div>
 
             {%endfor%}
             <hr>
 
         </div>
         <div class="col-md-8 col-lg-8">
-            <h2>SKILLS</h2>
-            {{skills}}
 
             <h2>PERSONAL PROJECTS</h2>
             {%for project in project_results%}
@@ -76,7 +77,30 @@
             </ol>
             {%endfor%}
             <h2>CERTIFICATES</h2>
+            {%for education in education%}
+            <p>{{education.certificate_name}}</p>
+            <p>{{education.period}}</p>
+            {%endfor%}
+            <h2>SKILLS</h2>
 
+            <section class="bar-graph bar-graph-horizontal bar-graph-one">
+                <div class="bar-one">
+                    <span class="skill">Django</span>
+                    <div class="bar" data-percentage="70%"></div>
+                </div>
+                <div class="bar-two">
+                    <span class="skill">Flask</span>
+                    <div class="bar" data-percentage="71%"></div>
+                </div>
+                <div class="bar-three">
+                    <span class="skill">Bootstrap</span>
+                    <div class="bar" data-percentage="74.7%"></div>
+                </div>
+                <div class="bar-four">
+                    <span class="skill">Git</span>
+                    <div class="bar" data-percentage="76.8%"></div>
+                </div>
+            </section>
         </div>
     </div>
 </div>

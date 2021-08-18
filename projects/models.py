@@ -2,7 +2,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 from tinymce.models import HTMLField
 from multiselectfield import MultiSelectField
-
+from django.contrib.auth.models import User
 
 
 technologies =(
@@ -12,7 +12,11 @@ technologies =(
     ('Bootstrap','Bootstrap'),
     ('Git','Git'),
     ('Javascript','Javascript'),
+    ('Postgresql','Postgresql'),
+    ('DjangoREST','DjangoREST'),
+
 )
+
 
 class Project(models.Model):
     title = models.CharField(max_length=100)

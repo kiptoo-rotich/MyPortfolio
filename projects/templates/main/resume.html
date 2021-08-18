@@ -64,9 +64,9 @@
 
             <h2>PERSONAL PROJECTS</h2>
             {%for project in project_results%}
-            <ol>
+            <ul class="unordered_list verticalLine">
                 <li>{{project.title}}</li>
-            </ol>
+            </ul>
             {%endfor%}
             <h2>LINKS</h2>
             {%for detail in details%}
@@ -77,20 +77,22 @@
             </ol>
             {%endfor%}
             <h2>CERTIFICATES</h2>
-            {%for education in education%}
-            <p>{{education.certificate_name}}</p>
-            <p>{{education.period}}</p>
-            {%endfor%}
+            <div class="verticalLine">
+                {%for education in education%}
+                <p>{{education.certificate_name}}</p>
+                <p style="margin-bottom:4%;"><i>{{education.period}}</i></p>
+                {%endfor%}
+            </div>
             <h2>SKILLS</h2>
 
             <section class="bar-graph bar-graph-horizontal bar-graph-one">
                 <div class="bar-one">
                     <span class="skill">Django</span>
-                    <div class="bar" data-percentage="70%"></div>
+                    <div class="bar" data-percentage="75%"></div>
                 </div>
                 <div class="bar-two">
                     <span class="skill">Flask</span>
-                    <div class="bar" data-percentage="71%"></div>
+                    <div class="bar" data-percentage="70%"></div>
                 </div>
                 <div class="bar-three">
                     <span class="skill">Bootstrap</span>

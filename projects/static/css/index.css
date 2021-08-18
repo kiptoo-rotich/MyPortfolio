@@ -2,6 +2,7 @@ body {
     background-image: url(../images/webstacks-ewXKiIezeTg-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .container {
@@ -10,6 +11,12 @@ body {
     background-blend-mode: hard-light;
     padding: 2%;
 }
+
+.contain_project {
+    height: cover;
+}
+
+
 
 h1.name {
     color: darkblue;
@@ -73,8 +80,8 @@ li {
 
 .details>li {
     list-style: none;
-    line-height: 1.8;
-    line-height: 30px;
+    padding-bottom: 6%;
+    font-family: 'Coustard', serif;
 }
 
 .project_padding {
@@ -85,6 +92,7 @@ li {
     border-left: thick solid #5bc0de;
     padding-left: 3%;
 }
+
 
 @keyframes slideInFromLeft {
     0% {
@@ -136,7 +144,6 @@ h2, li {
 }
 
 .bar-graph-horizontal .skill {
-    float: left;
     margin-top: 8px;
     width: 50px;
 }
@@ -197,7 +204,7 @@ h2, li {
         width: 0;
     }
     100% {
-        width: 70%;
+        width: 75%;
     }
 }
 
@@ -206,7 +213,7 @@ h2, li {
         width: 0;
     }
     100% {
-        width: 71%;
+        width: 70%;
     }
 }
 

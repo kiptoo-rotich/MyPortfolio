@@ -16,8 +16,6 @@ body {
     height: cover;
 }
 
-
-
 h1.name {
     color: darkblue;
     font-weight: 700;
@@ -61,6 +59,10 @@ h1.name {
     border: 1px solid green
 }
 
+.line{
+    border: 1px solid lightgray
+}
+
 p {
     font-size: 17px;
     font-family: 'Coustard', serif;
@@ -72,6 +74,10 @@ ul.unordered_list {
 
 ul.unordered_list li:before {
     content: '✓';
+}
+
+.list>li {
+    Padding: 2% 0% 2% 0px;
 }
 
 li {
@@ -93,6 +99,9 @@ li {
     padding-left: 3%;
 }
 
+.link {
+    color: yellow;
+}
 
 @keyframes slideInFromLeft {
     0% {
@@ -112,7 +121,7 @@ li {
     }
 }
 
-p, h1 {
+p, h1, ul {
     animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
@@ -197,6 +206,13 @@ h2, li {
     animation: show-bar-four 1.2s 0.4s forwards;
 }
 
+.bar-graph-one .bar-five .bar {
+    background-color: #284652;
+    -webkit-animation: show-bar-four 1.2s 0.4s forwards;
+    -moz-animation: show-bar-four 1.2s 0.4s forwards;
+    animation: show-bar-four 1.2s 0.4s forwards;
+}
+
 /* Bar Graph Horizontal Animations */
 
 @-webkit-keyframes show-bar-one {
@@ -213,7 +229,7 @@ h2, li {
         width: 0;
     }
     100% {
-        width: 70%;
+        width: 65%;
     }
 }
 
@@ -222,7 +238,7 @@ h2, li {
         width: 0;
     }
     100% {
-        width: 74.7%;
+        width: 75%;
     }
 }
 
@@ -231,7 +247,16 @@ h2, li {
         width: 0;
     }
     100% {
-        width: 76.8%;
+        width: 80%;
+    }
+}
+
+@-webkit-keyframes show-bar-five {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 75%;
     }
 }
 

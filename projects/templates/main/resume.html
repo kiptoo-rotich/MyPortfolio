@@ -36,19 +36,19 @@
     <hr class="resume">
     <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4">
-            <h2>EDUCATION</h2>
+            <h2 class="pt-2 pb-2">EDUCATION</h2>
             <div class="verticalLine">
                 {%for education in education%}
-                <h3>{{education.certificate_type}}</h3>
+                <h3 class="pt-3">{{education.certificate_type}}</h3>
+                <p style="float:right;color:#39788b;">{{education.school_location}}</p>
                 <p>{{education.institution}}</p>
                 <p>{{education.period}}</p>
                 <p>{{education.certificate_name}}</p>
-                <p>{{education.school_location}}</p>
                 {%endfor%}
             </div>
-            <hr>
+            <hr class="line">
 
-            <h2>WORK EXPERIENCE</h2>
+            <h2 class="pt-2 pb-2">WORK EXPERIENCE</h2>
             <div class="verticalLine">
                 {%for experience in experience%}
                 <h3>{{experience.position}}</h3>
@@ -57,33 +57,41 @@
             </div>
 
             {%endfor%}
-            <hr>
+            <hr class="line">
 
         </div>
         <div class="col-md-8 col-lg-8">
 
-            <h2>PERSONAL PROJECTS</h2>
+            <h2 class="pt-2 pb-2">PERSONAL PROJECTS</h2>
             {%for project in project_results%}
             <ul class="unordered_list verticalLine">
                 <li>{{project.title}}</li>
             </ul>
             {%endfor%}
-            <h2>LINKS</h2>
+
+            <hr class="line">
+
             {%for detail in details%}
-            <ol class="details">
+            <ol class="pt-2 pb-2">
                 <li><a href="{{detail.github_link}}"><img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"
                             width="20px" />
                         Github account </a></li>
             </ol>
             {%endfor%}
-            <h2>CERTIFICATES</h2>
+
+            <hr class="line">
+
+            <h2 class="pt-2 pb-2">CERTIFICATES</h2>
             <div class="verticalLine">
                 {%for education in education%}
                 <p>{{education.certificate_name}}</p>
                 <p style="margin-bottom:4%;"><i>{{education.period}}</i></p>
                 {%endfor%}
             </div>
-            <h2>SKILLS</h2>
+
+            <hr class="line">
+
+            <h2 class="pt-2 pb-2">SKILLS</h2>
 
             <section class="bar-graph bar-graph-horizontal bar-graph-one">
                 <div class="bar-one">
@@ -92,17 +100,23 @@
                 </div>
                 <div class="bar-two">
                     <span class="skill">Flask</span>
-                    <div class="bar" data-percentage="70%"></div>
+                    <div class="bar" data-percentage="65%"></div>
                 </div>
                 <div class="bar-three">
                     <span class="skill">Bootstrap</span>
-                    <div class="bar" data-percentage="74.7%"></div>
+                    <div class="bar" data-percentage="75%"></div>
                 </div>
                 <div class="bar-four">
                     <span class="skill">Git</span>
-                    <div class="bar" data-percentage="76.8%"></div>
+                    <div class="bar" data-percentage="80%"></div>
+                </div>
+                <div class="bar-five">
+                    <span class="skill">Javascript</span>
+                    <div class="bar" data-percentage="75%"></div>
                 </div>
             </section>
+
+
         </div>
     </div>
 </div>
